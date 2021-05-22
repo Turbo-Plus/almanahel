@@ -11,11 +11,11 @@ function BooksImg ( name , source){
   allBookImg.push(this);
 }
 
-new BooksImg ('Book1' , 'img/image1.webp');
+new BooksImg ('Book1' , 'img/image1.jpg');
 new BooksImg ('Book2' , 'img/image2.jpg');
 new BooksImg ('Book3' , 'img/image3.webp');
 new BooksImg ('Book4' , 'img/image4.jpg');
-new BooksImg ('Book5' , 'img/image5.png');
+new BooksImg ('Book5' , 'img/image5.PNG');
 new BooksImg ('Book6' , 'img/image6.jpg');
 new BooksImg ('Book7' , 'img/image7.jpg');
 
