@@ -7,7 +7,7 @@ let allBookImg = [];
 console.log(allBookImg);
 // add counter to cart and localstorg
 let cartArray = [];
-
+console.log(cartArray);
 // constractor for images
 function BooksImg(name, source) {
   this.name = name;
@@ -51,6 +51,8 @@ function addBooks() {
       // console.log(addBookSrc);
       // to get the src from the array
       addBookSrc.src = allBookImg[i].source;
+      
+      // push the img source to the array 
       cartArray.push(addBookSrc.src);
       // to get the name
       addBookName = allBookImg[i].name;
@@ -81,7 +83,7 @@ function addBooks() {
 
 
 
-
+// function to count the books user choosed
 function countCart() {
   let count = document.getElementById('cartid');
   count.textContent = cartArray.length;
@@ -89,12 +91,21 @@ function countCart() {
 }
 
 
-
+// function to set the data in the local storage 
 function setBookdata() {
   let localdata = JSON.stringify(cartArray);
   console.log(localdata);
   localStorage.setItem('cart', localdata);
 }
-console.log(cartArray);
+
+// getting local storage function 
+function getBookStorage() {
+  let strIngs = localStorage.getItem('cart');
+  let backToNormal = JSON.parse(strIngs);
+
+  if (backToNormal !==null)
+  cartArray= backToNormal ;
+}
 
 addBooks();
+getBookStorage();
