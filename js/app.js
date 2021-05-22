@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('Hello Js');
+
 
 //// global array to store book name and src
 let allBookImg = [];
