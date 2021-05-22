@@ -13,13 +13,15 @@ function BooksImg ( name , source){
   allBookImg.push(this);
 }
 
-new BooksImg ('Book1' , 'img/image1.jpg');
-new BooksImg ('Book2' , 'img/image2.jpg');
-new BooksImg ('Book3' , 'img/image3.webp');
-new BooksImg ('Book4' , 'img/image4.jpg');
-new BooksImg ('Book5' , 'img/image5.PNG');
-new BooksImg ('Book6' , 'img/image6.jpg');
-new BooksImg ('Book7' , 'img/image7.jpg');
+new BooksImg ('beautifulmaind' , 'img/beautifulmaind.jpg');
+new BooksImg ('timeofwhithores' , 'img/timeofwhithores.png');
+new BooksImg ('wakeup' , 'img/wakeup.jpg');
+new BooksImg ('evilpanicmin' , 'img/evilpanicmin.jpg');
+new BooksImg ('minbanana' , 'img/minbanana.jpg');
+new BooksImg ('goldenbook' , 'img/goldenbook.jpg');
+new BooksImg ('cssbook' , 'img/cssbook.jpg');
+new BooksImg ('htmlbook' , 'img/htmlbook.jpg');
+new BooksImg ('javabook' , 'img/javabook.PNG');
 
 // call element from html by class name
 let addToCartBtn = document.getElementsByClassName('btn');
@@ -59,6 +61,7 @@ function addBooks() {
       let img = document.createElement('img');
       tr.appendChild(img);
       img.src = allBookImg[i].source;
+      // img.alt = allBookImg[i].name;
       console.log(img);
       td.textContent = `${addBookName}`;
 
