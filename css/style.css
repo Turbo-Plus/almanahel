@@ -1,7 +1,11 @@
 #logoimg {
-    width: 25%;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-div img {
- width: 30%;
+body main div img {
+ width: 250px;
+ height: 400px;
+ margin: 10px 30px;
 }
