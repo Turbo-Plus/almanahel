@@ -1,13 +1,13 @@
 'use strict';
 
-console.log('Hello Js');
+
 
 //// global array to store book name and src
 let allBookImg = [];
-console.log(allBookImg);
+// console.log(allBookImg);
 // add counter to cart and localstorg
 let cartArray = [];
-console.log(cartArray);
+// console.log('cartArray', cartArray);
 // constractor for images
 function BooksImg(name, source) {
   this.name = name;
@@ -27,7 +27,7 @@ new BooksImg('Javabook', 'img/javabook.PNG');
 
 // call element from html by class name
 let addToCartBtn = document.getElementsByClassName('btn');
-console.log(addToCartBtn);
+// console.log(addToCartBtn);
 
 // test table
 let table = document.getElementById('tableCart');
@@ -45,19 +45,24 @@ function addBooks() {
     addBtn.addEventListener('click', userClick);
 
     // eslint-disable-next-line no-inner-declarations
-    function userClick(event) {
+    function userClick() {
       // the books aray
       addBookSrc = allBookImg[i];
       // console.log(addBookSrc);
+
       // to get the src from the array
       addBookSrc.src = allBookImg[i].source;
-      
-      // push the img source to the array 
-      cartArray.push(addBookSrc.src);
+
       // to get the name
       addBookName = allBookImg[i].name;
-      console.log('src ', addBookSrc.src);
-      console.log('book name ', addBookName);
+
+      // ===========================================
+      // push the img source and name to the array
+      cartArray.push([addBookSrc.src, addBookName]);
+      console.log(cartArray);
+      // console.log('src ', addBookSrc.src);
+      // console.log('book name ', addBookName);
+
       // render image and add data
       let tr = document.createElement('tr');
       table.appendChild(tr);
@@ -65,20 +70,19 @@ function addBooks() {
       tr.appendChild(td);
       let img = document.createElement('img');
       tr.appendChild(img);
-      img.src = allBookImg[i].source;
-     
-      
+      img.src = cartArray[0[0]];
+
       // img.alt = allBookImg[i].name;
-      console.log(img);
+
       td.textContent = `${addBookName}`;
 
       setBookdata();
-      countCart()
+      countCart();
 
     }
-    
+
   }
-  
+
 }
 
 
@@ -87,25 +91,27 @@ function addBooks() {
 function countCart() {
   let count = document.getElementById('cartid');
   count.textContent = cartArray.length;
-  console.log(count);
+  // console.log(count);
 }
 
 
-// function to set the data in the local storage 
+// function to set the data in the local storage
 function setBookdata() {
   let localdata = JSON.stringify(cartArray);
-  console.log(localdata);
+  console.log('string', localdata);
   localStorage.setItem('cart', localdata);
 }
 
-// getting local storage function 
+// getting local storage function
 function getBookStorage() {
   let strIngs = localStorage.getItem('cart');
   let backToNormal = JSON.parse(strIngs);
-
-  if (backToNormal !==null)
-  cartArray= backToNormal ;
+  console.log('back ', backToNormal);
+  if (backToNormal !== null) {
+    cartArray = backToNormal;
+  }
 }
 
 addBooks();
 getBookStorage();
+
