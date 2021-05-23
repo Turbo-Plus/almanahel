@@ -7,7 +7,13 @@ let allBookImg = [];
 // console.log(allBookImg);
 // add counter to cart and localstorg
 let cartArray = [];
-// console.log('cartArray', cartArray);
+
+function CartItem(name, source) {
+  this.name = name;
+  this.source = source;
+  cartArray.push(this);
+}
+
 // constractor for images
 function BooksImg(name, source) {
   this.name = name;
@@ -30,7 +36,7 @@ let addToCartBtn = document.getElementsByClassName('btn');
 // console.log(addToCartBtn);
 
 // test table
-let table = document.getElementById('tableCart');
+// let table = document.getElementById('tableCart');
 
 //////// variable for adding the book to the cart
 let addBookSrc;
@@ -58,23 +64,24 @@ function addBooks() {
 
       // ===========================================
       // push the img source and name to the array
-      cartArray.push([addBookSrc.src, addBookName]);
+      new CartItem(addBookName, addBookSrc.src);
       console.log(cartArray);
       // console.log('src ', addBookSrc.src);
       // console.log('book name ', addBookName);
 
       // render image and add data
-      let tr = document.createElement('tr');
-      table.appendChild(tr);
-      let td = document.createElement('td');
-      tr.appendChild(td);
-      let img = document.createElement('img');
-      tr.appendChild(img);
-      img.src = cartArray[0[0]];
+      // let tr = document.createElement('tr');
+      // table.appendChild(tr);
+      // let td = document.createElement('td');
+      // tr.appendChild(td);
+      // let img = document.createElement('img');
+      // tr.appendChild(img);
+      // img.src = cartArray[i].source;
+      // console.log('cartsource', cartArray[i].source);
 
-      // img.alt = allBookImg[i].name;
+      // // img.alt = allBookImg[i].name;
 
-      td.textContent = `${addBookName}`;
+      // td.textContent = `${addBookName}`;
 
       setBookdata();
       countCart();
@@ -98,7 +105,7 @@ function countCart() {
 // function to set the data in the local storage
 function setBookdata() {
   let localdata = JSON.stringify(cartArray);
-  console.log('string', localdata);
+  // console.log('string', localdata);
   localStorage.setItem('cart', localdata);
 }
 
