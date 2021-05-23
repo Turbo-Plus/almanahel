@@ -13,10 +13,11 @@ if (localStorage.cart) {
         tr.appendChild(img);
         img.src = allCart[i].source;
         console.log('cartsource', allCart[i].source);
-
         img.alt = allCart[i].name;
 
-        td.textContent = `${allCart[i].name}`;
+
+        td.textContent = `${allCart[i].name} ${allCart[i].price}JD`;
     }
 
+    window.localStorage.removeItem('cart');
 }

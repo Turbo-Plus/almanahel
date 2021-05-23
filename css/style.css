@@ -6,7 +6,7 @@ h1{
     text-align: center;
     font-family: 'Pattaya', sans-serif;
     font-size: 50px;
-    margin-top: -75px;
+    margin-top: -85px;
 }
 
 #logoimg {
@@ -16,7 +16,7 @@ h1{
 }
 header {
     position: relative;
-    background-color: blueviolet;
+    background-color: rgb(211, 165, 255);
     width: 100%;
     height: 200px;
 }
@@ -29,7 +29,11 @@ header {
 }
 
 #navTabs li a{
+    font-weight: 800;
     text-decoration: none;
+}
+#navTabs li {
+    padding: 5px;
 }
 
 body main div img {
