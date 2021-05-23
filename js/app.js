@@ -15,15 +15,15 @@ function BooksImg(name, source) {
   allBookImg.push(this);
 }
 
-new BooksImg('beautifulmaind', 'img/beautifulmaind.jpg');
-new BooksImg('timeofwhithores', 'img/timeofwhithores.png');
-new BooksImg('wakeup', 'img/wakeup.jpg');
-new BooksImg('evilpanicmin', 'img/evilpanicmin.jpg');
-new BooksImg('minbanana', 'img/minbanana.jpg');
-new BooksImg('goldenbook', 'img/goldenbook.jpg');
-new BooksImg('cssbook', 'img/cssbook.jpg');
-new BooksImg('htmlbook', 'img/htmlbook.jpg');
-new BooksImg('javabook', 'img/javabook.PNG');
+new BooksImg('Beautiful maind', 'img/beautifulmaind.jpg');
+new BooksImg('Time of white hores', 'img/timeofwhithores.png');
+new BooksImg('Wakeup', 'img/wakeup.jpg');
+new BooksImg('Evil panicmin', 'img/evilpanicmin.jpg');
+new BooksImg('Minbanana', 'img/minbanana.jpg');
+new BooksImg('Golden book', 'img/goldenbook.jpg');
+new BooksImg('Css book', 'img/cssbook.jpg');
+new BooksImg('Html book', 'img/htmlbook.jpg');
+new BooksImg('Javabook', 'img/javabook.PNG');
 
 // call element from html by class name
 let addToCartBtn = document.getElementsByClassName('btn');
