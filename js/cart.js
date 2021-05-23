@@ -1,6 +1,5 @@
 'use strict';
 let table = document.getElementById('tableCart');
-
 if (localStorage.cart) {
     let allCart = JSON.parse(localStorage.cart);
     console.log('allCart', allCart);
@@ -15,9 +14,19 @@ if (localStorage.cart) {
         console.log('cartsource', allCart[i].source);
         img.alt = allCart[i].name;
 
-
+        let remov = document.createElement('button');
+        tr.appendChild(remov);
+        remov.innerHTML = 'delete';
         td.textContent = `${allCart[i].name} ${allCart[i].price}JD`;
+        remov.addEventListener('click', removrow);
+        function removrow(event) {
+            console.log('ssss');
+            // tr.remove(i);
+            localStorage.removeItem(allCart[i]);
+
+        }
+
     }
 
-    window.localStorage.removeItem('cart');
+
 }
