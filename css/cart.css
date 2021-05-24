@@ -262,3 +262,18 @@ footer {
       margin-top: -50px;
   }
   
+img {
+    height: 150px;
+    width: 100px;
+    margin-top: 50px;
+}
+
+table, th, td , tr{
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .qunt {
+      width: 40px;
+  }

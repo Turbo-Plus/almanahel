@@ -19,23 +19,23 @@ function CartItem(name, source, price) {
 function BooksImg(name, source, price) {
   this.name = name;
   this.source = source;
-  this.price = price ;
+  this.price = price;
   allBookImg.push(this);
 }
 
-new BooksImg('Beautiful maind', 'img/beautifulmaind.jpg' , '14');
-new BooksImg('Time of white hores', 'img/timeofwhithores.png' , '17');
-new BooksImg('Wakeup', 'img/wakeup.jpg' , '34');
-new BooksImg('Evil panicmin', 'img/evilpanicmin.jpg' , '24');
-new BooksImg('Minbanana', 'img/minbanana.jpg' , '27');
-new BooksImg('Golden book', 'img/goldenbook.jpg' , '31');
-new BooksImg('Css book', 'img/cssbook.jpg' , '40');
-new BooksImg('Html book', 'img/htmlbook.jpg' , '19');
-new BooksImg('Javabook', 'img/javabook.PNG' , '25' );
+new BooksImg('Beautiful maind', 'img/beautifulmaind.jpg', '14');
+new BooksImg('Time of white hores', 'img/timeofwhithores.png', '17');
+new BooksImg('Wakeup', 'img/wakeup.jpg', '34');
+new BooksImg('Evil panicmin', 'img/evilpanicmin.jpg', '24');
+new BooksImg('Minbanana', 'img/minbanana.jpg', '27');
+new BooksImg('Golden book', 'img/goldenbook.jpg', '31');
+new BooksImg('Css book', 'img/cssbook.jpg', '40');
+new BooksImg('Html book', 'img/htmlbook.jpg', '19');
+new BooksImg('Javabook', 'img/javabook.PNG', '25');
 
 // call element from html by class name
 let addToCartBtn = document.getElementsByClassName('btn');
-// console.log(addToCartBtn);
+console.log(addToCartBtn);
 
 // test table
 // let table = document.getElementById('tableCart');
@@ -66,7 +66,7 @@ function addBooks() {
 
       // ===========================================
       // push the img source and name to the array
-      new CartItem(addBookName, addBookSrc.src , allBookImg[i].price);
+      new CartItem(addBookName, addBookSrc.src, allBookImg[i].price);
       console.log(cartArray);
       // console.log('src ', addBookSrc.src);
       // console.log('book name ', addBookName);
