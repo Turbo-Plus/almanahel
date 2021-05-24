@@ -1,4 +1,5 @@
 'use strict';
+
 let total = 0;
 let quantity = document.getElementsByClassName('qunt');
 let allCart;
@@ -35,8 +36,6 @@ if (localStorage.cart) {
       // الجلطة  by Hamza
       //   console.log(localStorage.cart);
       //   localStorage.removeItem('cart' ,localStorage[i]);
-
-
       let cart = JSON.parse(localStorage.getItem('cart'));
       cart.splice(i, 1);
       localStorage.setItem('cart', JSON.stringify(cart));
@@ -58,7 +57,7 @@ function booksTotal(){
 
     table.appendChild(totalRow);
     totalRow.appendChild(th);
-    total += parseInt(allCart[i].price) * quantity.value;
+    total= total + (parseInt(allCart[i].price) * quantity.value);
 
   }
   th.textContent = `Total ${total}`;
@@ -66,9 +65,9 @@ function booksTotal(){
 booksTotal();
 
 ////////////////////////////////////////////// change q number
-quantity = document.getElementsByClassName('qunt');
-for (let i = 0; i < quantity.length; i++) {
-  let input = quantity[i];
+let quantityChange = document.getElementsByClassName('qunt');
+for (let i = 0; i < quantityChange.length; i++) {
+  let input = quantityChange[i];
   input.addEventListener('change' , inputChanged);
 }
 function inputChanged(event){
@@ -76,8 +75,8 @@ function inputChanged(event){
   if(isNaN(input.value) || input.value <= 0){
     input.value = 1;
   }
-//   booksTotal();
-//   console.log('total', total);
+  console.log(input.value);
+  console.log('total', total);
 }
 
 
