@@ -13,18 +13,40 @@
 
 <body>
     <header>
-        <img src="img/Almanahel.png" id="logoimg" alt="almanahel">
-        <h1>Almanahel</h1>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="#">cart</a></li>
-                    <li><a href="about_us.html">about us</a></li>
-                </ul>
-            </nav>
+        
+        <div id="logoDiv">
+            <img src="img/Almanahel.png" id="logoimg" alt="almanahel">
         </div>
+        <h1>Almanahel</h1>
+    </div>
+    
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <!-- <div id="divSp"> -->
+                <span class="spanMenu"></span>
+                <span class="spanMenu"></span>
+                <span class="spanMenu"></span>
+                <!-- </div> -->
+                <ul id="menu">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
 
+                    <a href="about_us.html">
+                        <li>about us</li>
+                    </a>
+                    
+                    <a href="game.html" target="_blank">
+                        <li>Book of the week</li>
+                    </a>
+                    
+                </ul>
+            </div>
+        </nav>
+        
+        
+        <li><a href="#">cart</a></li>
     </header>
     <main>
         <section>
@@ -34,12 +56,16 @@
         <section>
             <table id="tableCart"></table>
         </section>
-    <button>Button</button>
+        <button>Button</button>
     </main>
     <footer>
+        <a href="https://www.facebook.com/" target="_blank"><img class="icon" src="img/Fb.png" alt="FB"> </a>
+        <a href="https://twitter.com/?lang=en" target="_blank"><img class="icon" src="img/twitter.png"
+                alt="twitter"></a>
+        <a href="https://www.google.com/gmail/" target="_blank"><img class="icon" src="img/gmail.png" alt="Gmail"></a>
         <p> &copy;almanahel2021 </p>
     </footer>
-<script src="js/cart.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
