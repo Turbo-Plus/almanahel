@@ -13,6 +13,7 @@ function CartItem(name, source, price) {
   this.source = source;
   this.price = price;
   cartArray.push(this);
+  this.quantity = 0;
 }
 
 // constractor for images
@@ -21,6 +22,7 @@ function BooksImg(name, source, price) {
   this.source = source;
   this.price = price;
   allBookImg.push(this);
+  this.quantity = 0;
 }
 
 new BooksImg('Beautiful maind', 'img/beautifulmaind.jpg', '14');
@@ -121,6 +123,25 @@ function getBookStorage() {
   }
 }
 
+// add quantity function
+let quantArry = [];
+let quantityForm = document.querySelectorAll('.inputform');
+console.log(quantityForm);
+for (let i = 0; i < quantityForm.length; i++) {
+  quantityForm[i].addEventListener('submit', quantityinput);
+
+  function quantityinput(event) {
+    // for(let i =0; i< allBookImg.length;i++){
+    let formIn = 
+    event.preventDefault();
+    formIn = event.target.childNodes[0].parentNode[1].value
+    // .target.childnode.text.perntNode.input.attributes.value.childnodes.nodeValue;
+    
+    console.log(formIn);
+
+  }
+}
+// }
 addBooks();
 getBookStorage();
 
