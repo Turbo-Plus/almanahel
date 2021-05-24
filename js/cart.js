@@ -32,12 +32,13 @@ if (localStorage.cart) {
             // tr.remove(i);
 
             // الجلطة
-            localStorage.removeItem(i);
+            localStorage.removeItem(allCart[i]);
+            
+            console.log(i);
         }
-
     }
 
-    console.log(quantity.value);
+    // console.log(quantity.value);
     let th = document.createElement('th');
     let totalRow = document.createElement('tr');  // calculate 
     for (let i = 0; i < allCart.length; i++) {
