@@ -6,7 +6,8 @@
 body {
         width: 100%;
         margin: 0 auto;
-        background-color: rgb(148, 213, 243);
+        background-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+        /* background-color: rgb(148, 213, 243); */
     }
 
 h1{
@@ -22,12 +23,18 @@ h1{
     margin-left: 20px;
 }
 
+#usparagrapgh {
+ margin-top: 10rem;
+ text-align: center;
+ font-family: 'Caveat', cursive;
+ font-size: 24px;
+}
+
 #us{
-    margin:  20em 0;
+    margin:  7em 0;
     /* width: 100%; */
     padding-left: 4rem;
-    border: 3px solid #73AD21;
-
+    /* border: 3px solid #fc140c; */
 }
 
 #us img {
@@ -40,7 +47,7 @@ h1{
   /* width: 200px;
   height: 200px; */
   display: inline-block;
-  margin: 3rem;
+  margin: 2.5rem;
   /* background-color: cadetblue; */
 }
 
@@ -51,11 +58,22 @@ h1{
 
 .allofus p {
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  /* background-color: cornsilk; */
 }
 
 a {
   text-decoration: none;
+  /* font-style: inherit; */
+  font-weight: 600;
+  font-size: 18px;
+  color: #313030;
+}
+
+a:hover {
+background-color: rgb(35, 88, 116);
+color: white;
 }
 
 .allofus a {
@@ -266,7 +284,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2DEEFD",endCo
 
 footer {
     height: 8rem;
-      background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg);
+    background: rgb(245,245,245);
+    background: -moz-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+    background: -webkit-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+    background: radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5F5F5",endColorstr="#12788B",GradientType=1);
+      /* background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg); */
   }
   footer nav {
       padding-top: 2.5rem;
