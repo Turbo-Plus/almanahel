@@ -108,7 +108,7 @@ hr {
  }
 
 .price {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 font-size: 25px;
 font-weight: bolder;
 margin-left: 120px;
@@ -118,4 +118,11 @@ position: absolute;
 
 .dots {
   display: none;
+}
+
+
+.par p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 15px;
+  line-height: 1.6
 }
