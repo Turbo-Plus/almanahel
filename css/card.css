@@ -119,3 +119,9 @@ position: absolute;
 .dots {
   display: none;
 }
+
+.par p{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}

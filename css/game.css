@@ -312,26 +312,34 @@ h3{
 }
 
 footer {
-    height: 8rem;
-      background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg);
-  }
-  footer nav {
-      /* float: right; */
-      padding-top: 2.5rem;
-      margin-left: 5rem;
-  
-  }
-  .icon {
-      margin: 0.5em;
-      width: 4%;
-  }
-  
-  footer p {
-      /* float: right; */
-      font-size: 20px;
-      font-family: cursive;
-      text-align: center;
-      font-weight: 700;
-      margin-top: -50px;
-  }
-  
+  margin-top: 2.5rem;
+  height: 8rem;
+  background: rgb(245,245,245);
+  background: -moz-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+  background: -webkit-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+  background: radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5F5F5",endColorstr="#12788B",GradientType=1);
+    /* background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg); */
+}
+footer nav {
+    padding-top: 2.5rem;
+    margin-left: 5rem;
+
+}
+.icon {
+    margin: 0.5em;
+    width: 4%;
+}
+
+footer p {
+    /* float: right; */
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    font-weight: 700;
+    margin-top: -50px;
+}
+
+#foot {
+  color: black;
+}
