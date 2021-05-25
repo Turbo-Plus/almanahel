@@ -6,68 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About_us</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <header>
-        <img src="img/Almanahel.png" id="logoimg" alt="almanahel">
+
+        <div id="logoDiv">
+            <img src="img/Almanahel.png" id="logoimg" alt="almanahel">
+        </div>
         <h1>Almanahel</h1>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="cart.html">cart</a></li>
-                    <li><a href="#">about us</a></li>
+
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <!-- <div id="divSp"> -->
+                <span class="spanMenu"></span>
+                <span class="spanMenu"></span>
+                <span class="spanMenu"></span>
+                <!-- </div> -->
+                <ul id="menu">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+
+                    <a href="#">
+                        <li>about us</li>
+                    </a>
+
+                    <a href="game.html" target="_blank">
+                        <li>Book of the week</li>
+                    </a>
+
                 </ul>
-            </nav>
+            </div>
+        </nav>
+
         </div>
     </header>
     <main>
-        <div>
-            <div id="qu">
-                <img src="" alt="">
+        <div id="us">
+
+            <div class="allofus" id="hamza">
+                
                 <div>
-                    <p>name</p>
-                    <a href=""></a>
+                    <p>Hamza S Almashhrawi</p>
+                    <img src="img/ME.jpg" alt="">
+                    <a href="https://www.linkedin.com/in/hamza-mashhrawi-4a0210210/" target="_blank">linkedin</a>
                     <a href=""></a>
                 </div>
             </div>
-            <div id="ha">
-                <img src="" alt="">
+            <div class="allofus" id="sanaa">
+               
                 <div>
-                    <p>name</p>
-                    <a href=""></a>
+                    <p>sanaa moghraby</p>
+                    <img src="img/sanaa.jpg" alt="">
+                    <a href="https://www.linkedin.com/" target="_blank">linkedin</a>
                     <a href=""></a>
                 </div>
             </div>
-            <div id="ib">
-                <img src="" alt="">
+            <div class="allofus" id="ibrahim">
+                <p>Ibrahem Sarayrah</p>
+                <img src="img/ibrahim-sarayrah.jpg" alt="">
                 <div>
-                    <p>name</p>
-                    <a href=""></a>
+                    <a href="https://www.linkedin.com/" target="_blank">linkedin</a>
                     <a href=""></a>
                 </div>
             </div>
-            <div id="sanaa">
-                <img src="" alt="">
+            <div class="allofus" id="qusai">
+                <p>Qusai Qeisi</p>
+                <img src="img/qusai.jpg" alt="">
                 <div>
-                    <p>name</p>
-                    <a href=""></a>
+                    <a href="https://www.linkedin.com/" target="_blank">linkedin</a>
                     <a href=""></a>
                 </div>
             </div>
-            
-            
-            
         </div>
     </main>
     <footer>
-         <p> &copy;almanahel2021 </p>
+        <nav>
+            <a href="https://www.facebook.com/" target="_blank"><img class="icon" src="img/Fb.png" alt="FB"> </a>
+            <a href="https://twitter.com/?lang=en" target="_blank"><img class="icon" src="img/twitter.png"
+                    alt="twitter"></a>
+            <a href="https://www.google.com/gmail/" target="_blank"><img class="icon" src="img/gmail.png"
+                    alt="Gmail"></a>
+        </nav>
+        <p> &copy;almanahel2021 </p>
     </footer>
-
 </body>
 
 </html>
