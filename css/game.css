@@ -1,21 +1,228 @@
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+*{
+    box-sizing: border-box;
+}
 body{
     color:rgb(251, 255, 255);
-    background-color: rgb(7, 6, 6);
+    
+    margin: auto;
+    /* padding-top: 5rem; */
+    width: 100%;
+    background: rgb(101,182,201);
+    background: radial-gradient(circle, rgba(101,182,201,1) 10%, rgba(109,113,119,1) 95%);}
+h1{
+    text-align: center;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 50px;
+    margin-top: -175px;
+    color: black;
 }
+header {
+    position: relative;
+    background: rgb(245,245,245);
+background: -moz-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+background: -webkit-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+background: radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5F5F5",endColorstr="#12788B",GradientType=1);
+    /* background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg); */
+    width: 100%;
+    height: 100px;
+    margin-bottom: 6rem;
+}
+#logoimg {
+    /* background-color: white; */
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#logoDiv{
+    margin-left: 15rem ;
+ width: 150px;
+ height: 200px;
+ /* border-radius: 5%; */
+ background: rgb(45,238,253);
+background: -moz-linear-gradient(0deg, rgba(45,238,253,0.4405112386751575) 0%, rgba(62,98,119,1) 74%);
+background: -webkit-linear-gradient(0deg, rgba(45,238,253,0.4405112386751575) 0%, rgba(62,98,119,1) 74%);
+background: linear-gradient(0deg, rgba(45,238,253,0.4405112386751575) 0%, rgba(62,98,119,1) 74%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2DEEFD",endColorstr="#3E6277",GradientType=1);
+
+ -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+#menuToggle
+ {
+     /* float: right; */
+   display: block;
+   position: relative;
+   /* margin-top: -110px; */
+   top: 50px;
+   left: 50px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #c9c2c2;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; 
+   z-index: 2; 
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ 
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #381616;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #b30e0e;
+ }
+ 
+ 
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ 
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ 
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #313030;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+ 
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ 
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+
+
 .container{
-    font-family: 'Odibee Sans', cursive;
-    font-size: 25px;
+
+    font-family:Arial, Helvetica, sans-serif ;
+        font-size: 40px;
 
 }
 .choice-container{
     display: flex;
     margin-bottom: 0.8rem;
-    width: 100%;
+    width: 50%;
     border-radius: 50px;
-    background: rgb(61, 94, 201);
+    background: rgb(42, 59, 83);
     font-size: 20px;
-    min-width: 80rem;
+    min-width:40rem;
+    margin: 4px auto;
 
 }
 
@@ -29,11 +236,13 @@ body{
 .choice-prefix{
     padding: 2rem 2.5rem;
     color: white;
+    font-size: 30px;
 
 }
 .choice-text{
     padding: 2rem;
     width: 100%;
+    font-size: 30px;
 
 }
 
@@ -89,3 +298,40 @@ body{
     background: rgb(24, 187, 24);
     width: 0%;
 }
+/* .hud{
+
+} */
+h3{
+    text-align: center;
+}
+.progress{
+    margin: 0 auto;
+}
+.score{
+    margin-right: 50px;
+}
+
+footer {
+    height: 8rem;
+      background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg);
+  }
+  footer nav {
+      /* float: right; */
+      padding-top: 2.5rem;
+      margin-left: 5rem;
+  
+  }
+  .icon {
+      margin: 0.5em;
+      width: 4%;
+  }
+  
+  footer p {
+      /* float: right; */
+      font-size: 20px;
+      font-family: cursive;
+      text-align: center;
+      font-weight: 700;
+      margin-top: -50px;
+  }
+  

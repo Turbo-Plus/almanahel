@@ -1,3 +1,4 @@
+'use strict';
 
 
 const username = document.getElementById('username')
@@ -14,8 +15,8 @@ finalScore.innerText = mostRecentScore
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 })
-
-saveHighScore = e => {
+let textParagraph = document.getElementById('paragraph')
+function saveHighScore(e) {
     e.preventDefault()
 
     const score = {
@@ -25,14 +26,16 @@ saveHighScore = e => {
 
     highScores.push(score)
 
-    highScores.sort((a,b) => {
+    highScores.sort((a, b) => {
         return b.score - a.score
     })
 
     highScores.splice(5)
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('/')
+    window.location.assign('#')
+    textParagraph.textContent = `Thank you  ${score.name} Your Score is ${score.score}`
 
-    
 }
+let imageShow= document.getElementById('imageid');
+imageShow.src = '../img/javabook.PNG' 
