@@ -51,14 +51,21 @@ let questions = [
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
-startGame = () => {
+// es6, javascript(ecmascript) version 2015
+function startGame(){
     questionCounter = 0
     score = 0
-    availableQuestions = [...questions]
+    availableQuestions = questions.slice()
     getNewQuestion()
 }
+// startGame = () => {
+//     questionCounter = 0
+//     score = 0
+//     availableQuestions = [...questions]
+//     getNewQuestion()
+// }
 
-getNewQuestion = () => {
+function getNewQuestion() {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
@@ -83,6 +90,9 @@ getNewQuestion = () => {
     acceptingAnswers = true
 }
 
+// for (i = 0; i< choices.length; i++){
+//     dosomething(choices[i])
+// }
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
