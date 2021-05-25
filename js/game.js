@@ -1,3 +1,5 @@
+
+
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
@@ -12,37 +14,37 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What is 2 + 2?',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
-    },
-    {
         question:
-            "The tallest building in the world is located in which city?",
-        choice1: "Dubai",
-        choice2: "New York",
-        choice3: "Shanghai",
-        choice4: "None of the above",
+            " Which of the following is correct to write “Hello World” on the web page?",
+        choice1: "document.write(“Hello World”)",
+        choice2: "print(“Hello World”)",
+        choice3: "System.out.println(“Hello World”)",
+        choice4: "response.write(“Hello World”)",
         answer: 1,
     },
     {
-        question: "What percent of American adults believe that chocolate milk comes from brown cows?",
-        choice1: "20%",
-        choice2: "18%",
-        choice3: "7%",
-        choice4: "33%",
+        question: " Which of the following is not a valid JavaScript variable name?",
+        choice1: " _java_and_ java _names",
+        choice2: "javaandjava%",
+        choice3: "2java",
+        choice4: "None of the above",
         answer: 3,
     },
     {
-        question: "Approximately what percent of U.S. power outages are caused by squirrels?",
-        choice1: "10-20%",
-        choice2: "5-10%",
-        choice3: "15-20%",
-        choice4: "30%-40%",
-        answer: 1,
+        question: "What is negative infinity in Java script?",
+        choice1: " number in JavaScript, derived by dividing negative number by zero ",
+        choice2: "number in JavaScript, derived by dividing number by zero",
+        choice3: "number in JavaScript, derived by dividing number by a negative number.",
+        choice4: " Any of below",
+        answer: 4,
+    },
+    {
+        question: 'What are JavaScript Data Types?',
+        choice1: 'Number',
+        choice2: 'String',
+        choice3: 'Boolean',
+        choice4: 'Object',
+        answer: 2,
     }
 ]
 
