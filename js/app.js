@@ -145,3 +145,40 @@ for (let i = 0; i < quantityForm.length; i++) {
 addBooks();
 getBookStorage();
 
+
+
+
+// //////////////////////////////test//////////////////////////
+
+let addReadBtn = document.getElementsByClassName('myBtn');
+let dots = document.getElementsByClassName("dots");
+let moreText = document.getElementsByClassName("more");
+let product = document.getElementsByClassName('product');
+
+
+  
+
+for (let i = 0; i < addReadBtn.length; i++){
+  // let addRead = addReadBtn[i];
+  product[i].addEventListener('click',userSubmit);
+}
+  
+  function userSubmit(event){
+    console.log('event', event.target.className);
+    console.log('event 2222', event.path[1].childNodes[3].childNodes[1].childNodes[1]);
+    let path = event.path[1].childNodes[3].childNodes[1].childNodes[1];
+
+    if(event.target.className === 'myBtn'){
+      if(path.style.display === 'none'){
+        path.style.display = 'inline';
+        event.target.textContent = 'Read Less';
+      }else{
+        path.style.display = 'none';
+        event.target.textContent = 'Read More';
+      }
+    }
+    
+
+    }
+
+// userSubmit();
