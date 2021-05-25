@@ -13,7 +13,7 @@ function CartItem(name, source, price) {
   this.source = source;
   this.price = price;
   cartArray.push(this);
-  this.quantity = 0;
+  this.quantity = 1;
 }
 
 // constractor for images
@@ -22,7 +22,7 @@ function BooksImg(name, source, price) {
   this.source = source;
   this.price = price;
   allBookImg.push(this);
-  this.quantity = 0;
+  this.quantity = 1;
 }
 
 new BooksImg('Beautiful maind', 'img/beautifulmaind.jpg', '14');
@@ -72,7 +72,6 @@ function addBooks() {
       console.log(cartArray);
       // console.log('src ', addBookSrc.src);
       // console.log('book name ', addBookName);
-
       // render image and add data
       // let tr = document.createElement('tr');
       // table.appendChild(tr);
@@ -118,30 +117,50 @@ function getBookStorage() {
   let strIngs = localStorage.getItem('cart');
   let backToNormal = JSON.parse(strIngs);
   console.log('back ', backToNormal);
-  if (backToNormal !== null) {
+  if (backToNormal ) {
     cartArray = backToNormal;
   }
 }
 
 // add quantity function
-let quantArry = [];
+
+let formIn;
 let quantityForm = document.querySelectorAll('.inputform');
 console.log(quantityForm);
 for (let i = 0; i < quantityForm.length; i++) {
   quantityForm[i].addEventListener('submit', quantityinput);
 
+  // eslint-disable-next-line no-inner-declarations
   function quantityinput(event) {
     // for(let i =0; i< allBookImg.length;i++){
-    let formIn = 
     event.preventDefault();
-    formIn = event.target.childNodes[0].parentNode[1].value
+    formIn = event.target.childNodes[0].parentNode[1].value;
     // .target.childnode.text.perntNode.input.attributes.value.childnodes.nodeValue;
-    
-    console.log(formIn);
 
+    // console.log(formIn);
+    cartArray[i].quantity = formIn;
+    console.log(cartArray[i].quantity);
+    console.log('all',cartArray);
   }
+  setBookdata();
 }
 // }
+
+let quantityChange = document.querySelectorAll('.addbook');
+
+for (let i = 0; i < quantityChange.length; i++) {
+  let input = quantityChange[i];
+  input.addEventListener('change', inputChanged);
+}
+function inputChanged(event) {
+  let input = event.target;
+  if (isNaN(input.value) || input.value <= 0) {
+    input.value = 1;
+  }
+
+}
+
+
 addBooks();
 getBookStorage();
 
