@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 body{
-    color:rgb(22, 24, 24);
+    color:rgb(251, 255, 255);
+    background-color: rgb(7, 6, 6);
 }
+.container{
+    font-family: 'Odibee Sans', cursive;
+    font-size: 25px;
 
+}
 .choice-container{
     display: flex;
     margin-bottom: 0.8rem;
     width: 100%;
-    border-radius: 4px;
-    background: aqua;
+    border-radius: 50px;
+    background: rgb(61, 94, 201);
     font-size: 20px;
     min-width: 80rem;
 
@@ -32,12 +38,12 @@ body{
 }
 
 .correct {
-    background: linear-gradient(32deg,green, 100%);
+    background: linear-gradient(32deg,rgb(27, 65, 25) 0%, rgb(41, 232, 111) 100%);
 }
 
 
 .incorrect {
-    background: linear-gradient(red);
+    background: linear-gradient(32deg,rgb(192, 29, 7) 0%, rgb(46, 6, 6) 100%);
 }
 
 
@@ -46,18 +52,18 @@ body{
         min-width: 40rem;
     }
     
-}
+} 
 
 
-/* head style  */
+ /* head style  */
 
-/* #hud{
+#hud{
     display: flex;
     justify-content: space-between;
 
 }
 
-.hud-prefix {
+ .hud-prefix {
     text-align: center;
     font-size: 32px;
 }
@@ -65,17 +71,21 @@ body{
 .hud-main-text{
     text-align: center;
 
-} */
+} 
 
-/* #progresBar {
+  #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.2rem solid rgb(11,223.,36) ;
-}
+    border: 0.2rem solid rgb(223, 201, 201) ;
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+
+} 
 
 
-#progresBarFull {
+#progressBarFull {
     height: 100%;
-    background: chartreuse;
+    background: rgb(24, 187, 24);
     width: 0%;
-} */
+}
