@@ -63,18 +63,18 @@ font-family: 'Dancing Script', cursive;
   /* background-color: cornsilk; */
 }
 
-a {
+/* a {
   text-decoration: none;
-  /* font-style: inherit; */
+  
   font-weight: 600;
   font-size: 18px;
   color: #313030;
-}
+} */
 
-a:hover {
+/* a:hover {
 background-color: rgb(35, 88, 116);
 color: white;
-}
+} */
 
 .allofus a {
   text-align: center;
@@ -282,31 +282,228 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2DEEFD",endCo
 
   
 
-footer {
-    height: 8rem;
-    background: rgb(245,245,245);
-    background: -moz-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
-    background: -webkit-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
-    background: radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5F5F5",endColorstr="#12788B",GradientType=1);
-      /* background-image: url(https://www.darksky.org/wp-content/uploads/2021/04/MEVE-Point-Lookout-JacobWFrank-feat.jpg); */
-  }
-  footer nav {
-      padding-top: 2.5rem;
-      margin-left: 5rem;
+
   
+/* _________________________________________________ */
+
+.box-desc h5 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+}
+
+#us {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* background-color: #2196F3; */
+  padding: 10px;
+  margin:  auto 0;
+  justify-content: center;
+  /* width: 100%; */
+}
+
+.col-sm {
+  margin: 2rem;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+width: 15rem;
+border-radius: 150px;
+background:rgb(245, 245, 245);
+position:relative;
+overflow: hidden;
+text-align:center;
+}
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0px;
+  top: 0px;
+  width: 0px;
+  height: 100%;
+  border-radius: 150px;
+  box-shadow: inset 0 0 25px rgba(0,0,0,0.30);
+  transition: all 0.3s ease;
+  background-image: linear-gradient(to right, #3c70a4 0%, #64b2cd 100%);
+}
+.box:hover:before {
+  width: 100%;
+}
+.box:hover .image-wrapper {
+padding:0;
+}
+.box:hover .box-desc {
+color:#fff;
+}
+.box:hover .social li a {
+background:#fff;
+background-image: none;
+color:#000;
+}
+.box:hover .social li a:hover {
+background:#1d1d1d;
+color:#fff;
+}
+.image-wrapper {
+  position: relative;
+max-width: 210px;
+  max-height: 210px;
+margin:0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  padding: 15px;
+  transition: all 0.5s ease;
+  box-shadow: inset 0px 0px 20px rgba(0,0,0,0.20);
+}
+.image-wrapper img {
+  border-radius: 50%;
+  transition: all 500ms ease;
+}
+.box-desc {
+position:relative;
+}
+ul.social {
+padding:0;
+}
+ul.social li {
+display:inline-block;
+list-style-type:none;
+}
+ul.social li a {
+position:relative;
+width: 36px;
+  height: 36px;
+background-image: linear-gradient(to right, #3c70a4 0%, #64b2cd 100%);
+display:inline-block;
+line-height:36px;
+border-radius:50%;
+color:#fff;
+transition: all .5s ease;
+}
+
+
+#ibrahim-margin {
+  margin-top: 25px;
+}
+
+#sanaaid #sanaaIMG {
+  width: 110%;
+  height: 150%;
+}
+
+/* -----------------------------------old footer */
+
+#foter {
+  height: 6rem;
+  width: 100%;
+  background: rgb(245,245,245);
+  background: -moz-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+  background: -webkit-radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+  background: radial-gradient(circle, rgba(245,245,245,1) 12%, rgba(245,245,245,1) 19%, rgba(18,120,139,1) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F5F5F5",endColorstr="#12788B",GradientType=1);
+}
+/* .copyright-text a {
+  margin-left: 40px;
+} */
+
+#logofoot {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    margin-top: -75px;
+}
+
+
+.copyright-text{
+  text-decoration: none;
+  /* text-align: center; */
+  /* margin-top: 30px; */
+  margin-left: 20px;
+  padding-top: 40px;
+  font-size: 20px;
+ font-family: 'Caveat', cursive; ;
+}
+
+.social-icons
+  {
+    margin-top: -55px;
+    float: right;
+    /* padding-left:0; */
+    list-style:none
   }
-  .icon {
-      margin: 0.5em;
-      width: 4%;
+  .social-icons img {
+    width:44px;
+    height:44px;
+  }
+  .social-icons li
+  {
+    /* margin-left: 25px; */
+    /* margin-right: 25px; */
+    display:inline-block;
+    /* margin-bottom:4px */
+  }
+  .social-icons li.title
+  {
+    margin-right:15px;
+    /* text-transform:uppercase; */
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    /* line-height:44px; */
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all 1s linear;
+    -o-transition:all 1s linear;
+    transition:all 1s linear
+  }
+  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+  {
+    color:#fff;
+    background-color:#29aafe
+  }
+  /* .social-icons.size-sm a
+  {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  } */
+  .social-icons a.facebook:hover
+  {
+    background-color:#3b5998
+  }
+  .social-icons a.twitter:hover
+  {
+    background-color:#00aced
+  }
+  .social-icons a.linkedin:hover
+  {
+    background-color:#007bb6
+  }
+  .social-icons a.dribbble:hover
+  {
+    background-color:#ea4c89
+  }
+  @media (max-width:767px)
+  {
   }
   
-  footer p {
-      /* float: right; */
-      font-size: 20px;
-      font-family: cursive;
-      text-align: center;
-      font-weight: 700;
-      margin-top: -50px;
-  }
   
+  /* #copyRIGht{
+    text-align: center;
+    margin-top: 40px;
+  } */
