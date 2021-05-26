@@ -1,6 +1,7 @@
 'use strict';
 
 let allProduct = [];
+let total = 0;
 
 function setProduct() {
   let productdata = JSON.stringify(allProduct);
@@ -20,7 +21,7 @@ function gitProduct() {
 }
 
 
-
+let trHead = ['Name','Img','Price', 'Quantity',''];
 let sectionTable = document.getElementById('section');
 let table = document.getElementById('tableCart');
 let tr;
@@ -30,44 +31,45 @@ let remov;
 function renderTable() {
   gitProduct();
   // console.log(allProduct);
-  // if (allProduct.length) {
+  if (!allProduct.length || allProduct == null) {
+    table.innerHTML = '<div><img id="emptycart" src="img/emptycart.png" alt="emptycart.png"></div>';
+  }else {
+    tableHEad();
+    for (let i = 0; i < allProduct.length; i++) {
+      tr = document.createElement('tr');
+      tr.setAttribute('id', i);
+      // console.log(tr);
+      table.appendChild(tr);
+      let td = document.createElement('td');
+      tr.appendChild(td);
+      let tdImg = document.createElement('td');
+      tr.appendChild(tdImg);
+      let img = document.createElement('img');
+      tdImg.appendChild(img);
+      tdImg.setAttribute('class','bokimage');
+      img.src = allProduct[i].source;
+      // console.log('cartsource', allCart[i].source);
+      img.alt = allProduct[i].name;
+      td.textContent = `${allProduct[i].name}`;
+      let td2 = document.createElement('td');
+      tr.appendChild(td2);
+      td2.textContent = `${allProduct[i].price}JD`;
+      let td3 = document.createElement('td');
+      tr.appendChild(td3);
+      td3.textContent = `${allProduct[i].quantity}`;
+      let tdRemov = document.createElement('td');
+      tr.appendChild(tdRemov);
+      remov = document.createElement('button');
+      remov.setAttribute('class', 'removebutton');
+      remov.id = i;
+      tdRemov.appendChild(remov);
+      remov.innerHTML = 'delete';
+    }
+    booksTotal();
 
-  for (let i = 0; i < allProduct.length; i++) {
-    tr = document.createElement('tr');
-    tr.setAttribute('id', i);
-    // console.log(tr);
-    table.appendChild(tr);
-    let td = document.createElement('td');
-    tr.appendChild(td);
-    let tdImg = document.createElement('td');
-    tr.appendChild(tdImg);
-    let img = document.createElement('img');
-    tdImg.appendChild(img);
-    tdImg.setAttribute('class','bokimage');
-    img.src = allProduct[i].source;
-    // console.log('cartsource', allCart[i].source);
-    img.alt = allProduct[i].name;
-    td.textContent = `${allProduct[i].name}`;
-    let td2 = document.createElement('td');
-    tr.appendChild(td2);
-    td2.textContent = `${allProduct[i].price}JD`;
-    let td3 = document.createElement('td');
-    tr.appendChild(td3);
-    td3.textContent = `Quantity :${allProduct[i].quantity}`;
-    let tdRemov = document.createElement('td');
-    tr.appendChild(tdRemov);
-    remov = document.createElement('button');
-    remov.setAttribute('class', 'removebutton');
-    remov.id = i;
-    tdRemov.appendChild(remov);
-    remov.innerHTML = 'delete';
   }
-  booksTotal();
-
 }
-// }
 
-let total = 0;
 function booksTotal() {
   th = document.createElement('th');
   let totalRow = document.createElement('tr'); // calculate
@@ -85,6 +87,14 @@ function booksTotal() {
 }
 
 // booksTotal();
+
+function tableHEad(){
+  for (let i =0 ; i< trHead.length ; i++) {
+    let trH=document.createElement('th');
+    table.appendChild(trH);
+    trH.textContent=trHead[i];
+  }
+}
 
 
 
@@ -116,8 +126,6 @@ function clearTable() {
   if (allProduct.length) {
     table.innerHTML = '';
     // renderTable();
-  } else {
-    table.innerHTML = '<div><h2>The cart is empty</h2></div>';
   }
 }
 

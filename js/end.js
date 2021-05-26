@@ -23,7 +23,6 @@ function saveHighScore(e) {
         score: mostRecentScore,
         name: username.value
     }
-
     highScores.push(score)
 
     highScores.sort((a, b) => {
@@ -35,7 +34,18 @@ function saveHighScore(e) {
     localStorage.setItem('highScores', JSON.stringify(highScores))
     window.location.assign('#')
     textParagraph.textContent = `Thank you  ${score.name} Your Score is ${score.score}`
+    let audiob = document.getElementById('audio');
 
+    audiob.innerHTML = '<audio src = "Al Manahel Children program (mp3cut.net) (1).mp3" controls autoplay id="audiobox"> </audio>'
+
+
+
+
+    // audio.src='mixkit-small-group-cheer-and-applause-518.wav';
+
+
+    username.value = '';
 }
-let imageShow= document.getElementById('imageid');
-imageShow.src = '../img/javabook.PNG' 
+let imageShow = document.getElementById('imageid');
+// let audio= document.getElementById('audio');
+imageShow.src = '../img/javabook.PNG'

@@ -237,7 +237,32 @@ body {
     text-align: center;
     font-family: 'Pattaya', sans-serif;
     padding-top: 11rem;
+    font-size: 20px;
 
+}
+/* 
+#firstThree li {
+    display: inline-block;
+} */
+
+#firstParagh {
+  width:100%;
+  overflow:hidden;
+}
+#firstParagh p {
+  animation: slide-left 3s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 
