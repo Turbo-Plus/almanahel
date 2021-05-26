@@ -272,7 +272,7 @@ footer {
   #section {
     margin: 0 auto;
     margin-top: 150px;
-    width: 500px;
+    width: 1500px;
   }
 
   #tableCart td {
@@ -302,11 +302,11 @@ footer {
 }
 
 #tableCart tr:nth-child(odd) {
-  background-color: #323C50;
+  background-color: #2e836e;
 }
 
 #tableCart tr:nth-child(even) {
-  background-color: #2C3446;
+  background-color: #2d6468;
 }
 
 #tableCart th {
@@ -314,17 +314,25 @@ footer {
   color:white;
 }
 
-#tableCart td:first-child { color: #FB667A; }
+#tableCart td { 
+  color: #ffffff;
+  font-size: 25px;
+}
+#tableCart th {
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+}
 
 
-#tableCart tr:hover {
-  background-color: #464A52;
+ #tableCart tr:hover {
+  background-color: #819fdb;
 -webkit-box-shadow: 0 6px 6px -6px #0E1119;
     -moz-box-shadow: 0 6px 6px -6px #0E1119;
          box-shadow: 0 6px 6px -6px #0E1119;
-}
+} 
 
-#tableCart td:hover {
+/* #tableCart td:hover {
   background-color: #2CA1B1;
   color: #403E10;
   font-weight: bold;
@@ -336,8 +344,8 @@ footer {
 	  transition-duration: 0.4s;
 	  transition-property: all;
   transition-timing-function: line;
-}
-#tableCart th:hover {
+}  */
+/* #tableCart th:hover {
   background-color: #2CA1B1;
   color: #403E10;
   font-weight: bold;
@@ -349,7 +357,7 @@ footer {
 	  transition-duration: 0.4s;
 	  transition-property: all;
   transition-timing-function: line;
-}
+} */
 
 @media (max-width: 800px) {
   #tableCart td:nth-child(4),
@@ -367,3 +375,37 @@ footer {
     background: linear-gradient(90deg, rgba(203,214,242,1) 0%, rgba(86,166,180,1) 48%, rgba(214,214,214,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cbd6f2",endColorstr="#d6d6d6",GradientType=1);
   }
+
+  #emptycart {
+    width: 650px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .removebutton {
+    box-shadow:inset 0px 1px 0px 0px #f5978e;
+    background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+    background-color:#f24537;
+    border-radius:6px;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+  }
+  .removebutton:hover {
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+    background-color:#c62d1f;
+  }
+  .removebutton:active {
+    position:relative;
+    top:1px;
+  }
+  
