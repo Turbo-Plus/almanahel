@@ -15,7 +15,7 @@ let availableQuestions = []
 let questions = [
     {
         question:
-            " Which of the following is correct to write “Hello World” on the web page?",
+            " Which of the following is correct to write “Hello World” on the web page in JS?",
         choice1: "document.write(“Hello World”)",
         choice2: "print(“Hello World”)",
         choice3: "System.out.println(“Hello World”)",
@@ -35,11 +35,11 @@ let questions = [
         choice1: " number in JavaScript, derived by dividing negative number by zero ",
         choice2: "number in JavaScript, derived by dividing number by zero",
         choice3: "number in JavaScript, derived by dividing number by a negative number.",
-        choice4: " Any of below",
+        choice4: "  ALL Of Them",
         answer: 4,
     },
     {
-        question: 'What are JavaScript Data Types?',
+        question: 'What are JavaScript Data Types between ""?',
         choice1: 'Number',
         choice2: 'String',
         choice3: 'Boolean',
